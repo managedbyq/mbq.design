@@ -1,0 +1,42 @@
+/*
+
+  FLEXBOX
+
+*/
+/* Display */
+.d-flex {display: flex;}
+.ai-center {align-items: center;}
+/*
+
+  SIZING
+
+*/
+/* Width */
+.w-100 {width: 100%;}
+/* Height */
+.h-100 {height: 100%;}
+/*
+
+  SPACING
+
+*/
+/* Padding */
+.pb-1rem {padding-bottom: 1rem;}
+.p-4rem {padding: 4rem;}
+/*
+
+  TYPOGRAPHY
+
+*/
+/* Font weight */
+.ff-roboto {font-family: "Roboto", sans-serif;}
+/* Text align */
+.ta-center {text-align: center;}
+/* Font size */
+.fs-1_125rem {font-size: 1.125rem;}
+.fs-1_5rem {font-size: 1.5rem;}
+/* Color */
+.c-coal {color: #333333;}
+.c-ash {color: #828282;}
+.c-silver {color: #bdbdbd;}
+.c-pearl {color: #e0e0e0;}
