@@ -1,2 +1,2 @@
-### Read me
-Hello world
+### Managed by Q Design
+Coming soon
