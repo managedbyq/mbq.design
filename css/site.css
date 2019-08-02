@@ -20,23 +20,72 @@
   SPACING
 
 */
+/* Margin */
+.mb-1rem {margin-bottom: 1rem;}
+.mb-2rem {margin-bottom: 2rem;}
 /* Padding */
-.pb-1rem {padding-bottom: 1rem;}
-.p-4rem {padding: 4rem;}
+.pt-5_5rem {padding-top: 5.5rem;}
+.ph-1rem {padding-right: 1rem; padding-left: 1rem;}
 /*
 
   TYPOGRAPHY
+  - Apercu Regular
+  - Apercu Black
+  - Apercu Mono
+  - Font family
+  - Font size
+  - Letter spacing
+  - Line height
+  - Color
 
 */
-/* Font weight */
-.ff-roboto {font-family: "Roboto", sans-serif;}
-/* Text align */
-.ta-center {text-align: center;}
+/* Apercu Regular */
+@font-face {
+  font-family: "Apercu Regular";
+  src: url("fonts/Apercu-Regular-Pro.eot");
+  src:
+    url("fonts/Apercu-Regular-Pro.ttf") format("ttf"),
+    url("fonts/Apercu-Regular-Pro.woff") format("woff"),
+    url("fonts/Apercu-Regular-Pro.woff2") format("woff2");
+}
+/* Apercu Black */
+@font-face {
+  font-family: "Apercu Black";
+  src: url("fonts/Apercu-Black-Pro.eot");
+  src:
+    url("fonts/Apercu-Black-Pro.ttf") format("ttf"),
+    url("fonts/Apercu-Black-Pro.woff") format("woff"),
+    url("fonts/Apercu-Black-Pro.woff2") format("woff2");
+}
+/* Apercu Mono */
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("fonts/Apercu-Mono-Regular-Pro.eot");
+  src:
+    url("fonts/Apercu-Mono-Regular-Pro.ttf") format("ttf"),
+    url("fonts/Apercu-Mono-Regular-Pro.woff") format("woff"),
+    url("fonts/Apercu-Mono-Regular-Pro.woff2") format("woff2");
+}
+/* Font family */
+.ff-apercu-regular {font-family: "Apercu Regular", sans-serif;}
+.ff-apercu-black {font-family: "Apercu Black", sans-serif;}
+.ff-apercu-mono {font-family: "Apercu Mono", sans-serif;}
 /* Font size */
-.fs-1_125rem {font-size: 1.125rem;}
-.fs-1_5rem {font-size: 1.5rem;}
+.fs-0_875rem {font-size: 0.875rem;}
+.fs-1_6rem {font-size: 1.6rem;}
+.fs-3_5rem {font-size: 3.5rem;}
+/* Letter spacing */
+.ls-0_05rem {letter-spacing: 0.05rem;}
+/* Line height */
+.lh-1rem {line-height: 3.8rem;}
 /* Color */
-.c-coal {color: #333333;}
-.c-ash {color: #828282;}
-.c-silver {color: #bdbdbd;}
-.c-pearl {color: #e0e0e0;}
+.c-black {color: #000000;}
+.c-beige {color: #FFF4D7;}
+/*
+
+  COLORS
+  - Background color
+
+*/
+/* Background color */
+.bc-black {background-color: #000000;}
