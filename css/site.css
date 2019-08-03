@@ -1,21 +1,27 @@
 /*
 
-  FLEXBOX
-  - Display
+  LAYOUT
   - Position
+  - Display
   - Top
+  - Right
   - Left
 
 */
+/* Position */
+.p-relative {position: relative;}
+.p-absolute {position: absolute;}
 /* Display */
 .d-block {display: block;}
+.d-none {display: none;}
 .d-flex {display: flex;}
 .ai-center {align-items: center;}
-/* Position */
-.p-absolute {position: absolute;}
-.p-relative {position: relative;}
+.jc-center {justify-content: center;}
 /* Top */
 .t--2px {top: -2px;}
+.t--6rem {top: -9rem;}
+/* Right */
+.r-2rem {right: 2rem;}
 /* Left */
 .l-0_5rem {left: 0.5rem;}
 /*
@@ -26,9 +32,12 @@
 
 */
 /* Height */
-.h-100 {height: 100%;}
+.h-4rem {height: 4rem;}
+.h-11_25rem {height: 11.25rem;}
+.h-13rem {height: 13rem;}
 /* Width */
-.w-100 {width: 100%;}
+.w-100p {width: 100%;}
+.w-11_25rem {width: 11.25rem;}
 /*
 
   SPACING
@@ -79,6 +88,24 @@
     url("fonts/Apercu-Regular-Pro.woff") format("woff"),
     url("fonts/Apercu-Regular-Pro.woff2") format("woff2");
 }
+/* Apercu Medium */
+@font-face {
+  font-family: "Apercu Medium";
+  src: url("fonts/Apercu-Medium-Pro.eot");
+  src:
+    url("fonts/Apercu-Medium-Pro.ttf") format("ttf"),
+    url("fonts/Apercu-Medium-Pro.woff") format("woff"),
+    url("fonts/Apercu-Medium-Pro.woff2") format("woff2");
+}
+/* Apercu Bold */
+@font-face {
+  font-family: "Apercu Bold";
+  src: url("fonts/Apercu-Bold-Pro.eot");
+  src:
+    url("fonts/Apercu-Bold-Pro.ttf") format("ttf"),
+    url("fonts/Apercu-Bold-Pro.woff") format("woff"),
+    url("fonts/Apercu-Bold-Pro.woff2") format("woff2");
+}
 /* Apercu Black */
 @font-face {
   font-family: "Apercu Black";
@@ -100,12 +127,17 @@
 /* Font family */
 .ff-apercu-light {font-family: "Apercu Light", sans-serif;}
 .ff-apercu-regular {font-family: "Apercu Regular", sans-serif;}
+.ff-apercu-medium {font-family: "Apercu Medium", sans-serif;}
+.ff-apercu-bold {font-family: "Apercu Bold", sans-serif;}
 .ff-apercu-black {font-family: "Apercu Black", sans-serif;}
 .ff-apercu-mono {font-family: "Apercu Mono", sans-serif;}
 /* Font size */
 .fs-0_875rem {font-size: 0.875rem;}
+.fs-1_2rem {font-size: 1.2rem;}
 .fs-1_6rem {font-size: 1.6rem;}
 .fs-3_5rem {font-size: 3.5rem;}
+/* Font style */
+.fst-bold {font-style: bold;}
 /* Letter spacing */
 .ls-0_05rem {letter-spacing: 0.05rem;}
 /* Line height */
@@ -118,10 +150,139 @@
 .c-beige {color: #FFF4D7;}
 /*
 
-  COLORS
+  BACKGROUNDS
   - Background color
+  - Background size
+  - Star
+  - Triangles
 
 */
 /* Background color */
 .bc-black {background-color: #000000;}
 .bc-blue {background-color: #3971DE;}
+/* Background size */
+.bs-contain {background-size: 100%;}
+/* Background repeat */
+.br-no_repeat {background-repeat: no-repeat;}
+/* Star */
+.star {background-image: url("../images/star.svg");}
+/* Triangles */
+.triangles {background-image: url("../images/triangles.svg");}
+/*
+
+  TRANSFORM
+  - Rotate
+
+*/
+/* Rotate */
+.t-rotate-10deg {transform: rotate(10deg);}
+/*
+
+  ANIMATION
+  - Animation
+  - Keyframes
+
+*/
+/* Animation */
+.a-spin {
+  animation: spin 25s linear infinite;
+  -moz-animation: spin 25s linear infinite;
+  -webkit-animation: spin 25s linear infinite;
+  -o-animation: spin 25s linear infinite;
+}
+/* Keyframes */
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+/*
+
+  MEDIA QUERIES
+  - Not small (+40rem)
+  - Medium (+64rem)
+
+*/
+/* Not small */
+@media screen and (min-width: 40rem) {
+  /*
+
+    LAYOUT
+    - Top
+    - Right
+
+  */
+  /* Top */
+  .t--14rem-ns {top: -14rem;}
+  /* Right */
+  .r-4rem-ns {right: 4rem;}
+  /*
+
+    SIZING
+    - Height
+    - Width
+    - Max width
+
+  */
+  /* Height */
+  .h-18rem-ns {height: 18rem;}
+  /* Width */
+  .w-18rem-ns {width: 18rem;}
+  /* Max width */
+  .mw-18rem-ns {max-width: 18rem;}
+  /*
+
+    TYPOGRAPHY
+    - Font size
+
+  */
+  /* Font size */
+  .fs-2rem-ns {font-size: 2rem;}
+  /*
+
+    BACKGROUND
+    - Background size
+
+  */
+  /* Background size */
+  .bs-cover-ns {background-size: contain;}
+}
+/* Medium */
+@media screen and (min-width: 64rem) {
+  /*
+
+    LAYOUT
+    - Position
+    - Display
+    - Top
+    - Right
+
+  */
+  /* Position */
+  .p-fixed-m {position: fixed;}
+  /* Display */
+  .d-block-m {display: block;}
+  .d-none-m {display: none;}
+  /* Top */
+  .t-0-m {top: 0;}
+  /* Right */
+  .r-0-m {right: 0;}
+  /*
+
+    SIZING
+    - Height
+    - Width
+
+  */
+  /* Height */
+  .h-100vh-m {height: 100vh;}
+  /* Width */
+  .w-50p-m {width: 50%;}
+  /*
+
+    BACKGROUND
+    - Background color
+
+  */
+  /* Background color */
+  .bc-blue-m {background-color: #3971DE;}
+}
