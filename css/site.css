@@ -22,12 +22,19 @@
 .t--12rem {top: -12rem;}
 .t--2px {top: -2px;}
 .t-0 {top: 0;}
-.t-40p {top: 40%;}
+.t-2rem {top: 2rem;}
+.t-45p {top: 45%;}
+.t-48_5p {top: 48.5%;}
+.t-2rem {top: 2rem;}
 /* Bottom */
 .b-0 {bottom: 0;}
+.b-2rem {bottom: 2rem;}
 /* Left */
 .l-0_5rem {left: 0.5rem;}
+.l-35p {left: 35%;}
+.l-47_5p {left: 47.5%;}
 .l-80p {left: 15rem;}
+.l-18rem {left: 18rem;}
 /*
 
   SIZING
@@ -36,15 +43,18 @@
 
 */
 /* Height */
+.h-1rem {height: 1rem;}
 .h-4rem {height: 4rem;}
 .h-4_5rem {height: 4.5rem;}
 .h-13rem {height: 13rem;}
 .h-15rem {height: 15rem;}
-.h-20p {height: 20%;}
+.h-10p {height: 10%;}
 .h-33p {height: calc(100% / 3);}
-.h-40p {height: 40%;}
+.h-45p {height: 45%;}
 /* Width */
 .w-100p {width: 100%;}
+.w-225p {width: 225%;}
+.w-4rem {width: 4rem;}
 .w-4_5rem {width: 4.5rem;}
 .w-15rem {width: 15rem;}
 /*
@@ -76,6 +86,7 @@
   - Font size
   - Letter spacing
   - Line height
+  - Text align
   - Color
 
 */
@@ -154,6 +165,8 @@
 .lh-1_5rem {line-height: 1.5rem;}
 .lh-2rem {line-height: 2rem;}
 .lh-3_8rem {line-height: 3.8rem;}
+/* Text align */
+.ta-center {text-align: center;}
 /* Color */
 .c-black {color: #000000;}
 .c-beige {color: #FFF4D7;}
@@ -183,11 +196,15 @@
 
   TRANSFORM
   - Rotate
+  - Transform origin
 
 */
 /* Rotate */
 .t-rotate-10deg {transform: rotate(10deg);}
+.t-rotate-90deg {transform: rotate(90deg);}
 .t-rotate-180deg {transform: rotate(180deg);}
+/* Transform origin */
+.t-origin-left_top {transform-origin: left top;}
 /*
 
   ANIMATION
@@ -212,6 +229,7 @@
   MEDIA QUERIES
   - Not small (+40rem)
   - Medium (+64rem)
+  - Large (+90rem)
 
 */
 /* Not small */
@@ -266,6 +284,7 @@
   .p-fixed-m {position: fixed;}
   /* Display */
   .d-block-m {display: block;}
+  .d-flex-m {display: flex;}
   .d-none-m {display: none;}
   /* Top */
   .t-0-m {top: 0;}
@@ -301,11 +320,37 @@
   /* Background color */
   .bc-blue-m {background-color: #3971DE;}
 }
-/*
+/* Large */
+@media screen and (min-width: 95rem) {
+  /*
 
-  DELETE
+    LAYOUT
+    - Display
+    - Position
 
-*/
-.triangle {
-  fill: #FFCB45;
+  */
+  /* Display */
+  .d-flex-l {display: flex;}
+  /* Position */
+  .r-0-l {right: 0;}
+  .l-0-l {left: 0;}
+  /*
+
+    SIZING
+    - Width
+
+  */
+  /* Width */
+  .w-50p-l {width: 50%;}
+  /*
+
+    TYPOGRAPHY
+    - Font size
+    - Line height
+
+  */
+  /* Font size */
+  .fs-7_5rem-l {font-size: 6rem;}
+  /* Line height */
+  .lh-8_15rem-l {line-height: 6rem;}
 }
