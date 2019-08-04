@@ -11,6 +11,7 @@
 /* Position */
 .p-relative {position: relative;}
 .p-absolute {position: absolute;}
+.p-fixed {position: fixed;}
 /* Display */
 .d-block {display: block;}
 .d-none {display: none;}
@@ -18,12 +19,15 @@
 .ai-center {align-items: center;}
 .jc-center {justify-content: center;}
 /* Top */
+.t--12rem {top: -12rem;}
 .t--2px {top: -2px;}
-.t--6rem {top: -9rem;}
-/* Right */
-.r-2rem {right: 2rem;}
+.t-0 {top: 0;}
+.t-40p {top: 40%;}
+/* Bottom */
+.b-0 {bottom: 0;}
 /* Left */
 .l-0_5rem {left: 0.5rem;}
+.l-80p {left: 15rem;}
 /*
 
   SIZING
@@ -33,11 +37,16 @@
 */
 /* Height */
 .h-4rem {height: 4rem;}
-.h-11_25rem {height: 11.25rem;}
+.h-4_5rem {height: 4.5rem;}
 .h-13rem {height: 13rem;}
+.h-15rem {height: 15rem;}
+.h-20p {height: 20%;}
+.h-33p {height: calc(100% / 3);}
+.h-40p {height: 40%;}
 /* Width */
 .w-100p {width: 100%;}
-.w-11_25rem {width: 11.25rem;}
+.w-4_5rem {width: 4.5rem;}
+.w-15rem {width: 15rem;}
 /*
 
   SPACING
@@ -160,8 +169,10 @@
 /* Background color */
 .bc-black {background-color: #000000;}
 .bc-blue {background-color: #3971DE;}
+.bc-yellow {background-color: #FFCB45;}
 /* Background size */
-.bs-contain {background-size: 100%;}
+.bs-cover {background-size: cover;}
+.bs-contain {background-size: contain;}
 /* Background repeat */
 .br-no_repeat {background-repeat: no-repeat;}
 /* Star */
@@ -176,6 +187,7 @@
 */
 /* Rotate */
 .t-rotate-10deg {transform: rotate(10deg);}
+.t-rotate-180deg {transform: rotate(180deg);}
 /*
 
   ANIMATION
@@ -215,6 +227,7 @@
   .t--14rem-ns {top: -14rem;}
   /* Right */
   .r-4rem-ns {right: 4rem;}
+  .r-5vw-ns {right: 15vw;}
   /*
 
     SIZING
@@ -237,14 +250,6 @@
   */
   /* Font size */
   .fs-2rem-ns {font-size: 2rem;}
-  /*
-
-    BACKGROUND
-    - Background size
-
-  */
-  /* Background size */
-  .bs-cover-ns {background-size: contain;}
 }
 /* Medium */
 @media screen and (min-width: 64rem) {
@@ -275,8 +280,18 @@
   */
   /* Height */
   .h-100vh-m {height: 100vh;}
+  .h-20rem-m {height: 20rem;}
   /* Width */
   .w-50p-m {width: 50%;}
+  .w-20rem-m {width: 20rem;}
+  /*
+
+    SPACING
+    - Padding
+
+  */
+  /* Padding */
+  .ph-4rem-m {padding-right: 4rem; padding-left: 4rem;}
   /*
 
     BACKGROUND
@@ -285,4 +300,12 @@
   */
   /* Background color */
   .bc-blue-m {background-color: #3971DE;}
+}
+/*
+
+  DELETE
+
+*/
+.triangle {
+  fill: #FFCB45;
 }
