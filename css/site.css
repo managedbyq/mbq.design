@@ -33,7 +33,7 @@
 .l-35p {left: 35%;}
 .l-47_5p {left: 47.5%;}
 .l-0_5rem {left: 0.5rem;}
-.l-12rem {left: 12rem;}
+.l-6rem {right: 2rem;}
 .l-18rem {left: 18rem;}
 /*
 
@@ -157,17 +157,18 @@
 /* Font size */
 .fs-0_875rem {font-size: 0.875rem;}
 .fs-1_2rem {font-size: 1.2rem;}
+.fs-1_4rem {font-size: 1.4rem;}
 .fs-1_6rem {font-size: 1.6rem;}
-.fs-3_5rem {font-size: 3.5rem;}
+.fs-3rem {font-size: 2.5rem;}
 /* Font style */
 .fst-bold {font-style: bold;}
 /* Letter spacing */
 .ls-0_05rem {letter-spacing: 0.05rem;}
 /* Line height */
-.lh-1_3rem {line-height: 1.3rem;}
+.lh-1_5rem {line-height: 1.5rem;}
 .lh-1_8rem {line-height: 1.8rem;}
 .lh-2rem {line-height: 2rem;}
-.lh-3_8rem {line-height: 3.8rem;}
+.lh-2_75rem {line-height: 2.75rem;}
 /* Text align */
 .ta-center {text-align: center;}
 /* Color */
@@ -250,6 +251,7 @@
   .r-4rem-ns {right: 4rem;}
   .r-5vw-ns {right: 15vw;}
   /* Left */
+  .l-12rem-ns {left: 12rem;}
   .l-20rem-ns {left: 20rem;}
   /*
 
@@ -264,15 +266,20 @@
   /* Width */
   .w-18rem-ns {width: 18rem;}
   /* Max width */
-  .mw-18rem-ns {max-width: 18rem;}
+  .mw-18rem-ns {max-width: 24rem;}
   /*
 
     TYPOGRAPHY
     - Font size
+    - Line height
 
   */
   /* Font size */
   .fs-2rem-ns {font-size: 2rem;}
+  .fs-1_6rem-ns {font-size: 1.6rem;}
+  .fs-3_5rem-ns {font-size: 3.5rem;}
+  /* Line height */
+  .lh-3_8rem-ns {line-height: 3.8rem;}
 }
 /* Medium */
 @media screen and (min-width: 64rem) {
@@ -300,6 +307,7 @@
     SIZING
     - Height
     - Width
+    - Max width
 
   */
   /* Height */
@@ -308,6 +316,9 @@
   /* Width */
   .w-50p-m {width: 50%;}
   .w-20rem-m {width: 20rem;}
+  /* Max width */
+  /* Max width */
+  .mw-34rem-m {max-width: 34;}
   /*
 
     SPACING
