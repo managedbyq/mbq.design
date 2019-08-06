@@ -19,22 +19,23 @@
 .ai-center {align-items: center;}
 .jc-center {justify-content: center;}
 /* Top */
-.t--10rem {top: -10rem;}
+.t--8rem {top: -8rem;}
 .t--2px {top: -2px;}
 .t-0 {top: 0;}
 .t-2rem {top: 2rem;}
 .t-40p {top: 40%;}
-.t-48_5p {top: 48.5%;}
 .t-2rem {top: 2rem;}
+/* Right */
+.r-3rem {right: 3rem;}
 /* Bottom */
 .b-0 {bottom: 0;}
+.b-1rem {bottom: 1rem;}
 .b-2rem {bottom: 2rem;}
 /* Left */
 .l-35p {left: 35%;}
-.l-47_5p {left: 47.5%;}
+.l-45p {left: 43%;}
+.l-49p {left: 49%;}
 .l-0_5rem {left: 0.5rem;}
-.l-6rem {right: 2rem;}
-.l-18rem {left: 18rem;}
 /*
 
   SIZING
@@ -43,9 +44,11 @@
 
 */
 /* Height */
+.h-0_5rem {height: 0.5rem}
 .h-1rem {height: 1rem;}
 .h-4rem {height: 4rem;}
 .h-4_5rem {height: 4.5rem;}
+.h-12rem {height: 12rem;}
 .h-13rem {height: 13rem;}
 .h-15rem {height: 15rem;}
 .h-10p {height: 10%;}
@@ -55,8 +58,10 @@
 .h-40p {height: 40%;}
 /* Width */
 .w-100p {width: 100%;}
+.w-2rem {width: 2rem;}
 .w-4rem {width: 4rem;}
 .w-4_5rem {width: 4.5rem;}
+.w-12rem {width: 12rem;}
 .w-15rem {width: 15rem;}
 .w-175rem {width: 175rem;}
 /*
@@ -212,21 +217,60 @@
 /*
 
   ANIMATION
-  - Animation
+  - Styles
+  - Animations
   - Keyframes
+  - Transition functions
+  - Transition duration
+  - Transition properties
 
 */
-/* Animation */
+/* Styles */
+.o-1 {opacity: 1;}
+.o-0 {opacity: 0;}
+/* Animations */
 .a-spin {
   animation: spin 25s linear infinite;
   -moz-animation: spin 25s linear infinite;
   -webkit-animation: spin 25s linear infinite;
   -o-animation: spin 25s linear infinite;
 }
+.a-move {
+  animation: move 2s ease-in-out infinite;
+  -moz-animation: move 2s ease-in-out infinite;
+  -webkit-animation: move 2s ease-in-out infinite;
+  -o-animation: move 2s ease-in-out infinite;
+}
+.a-move-0_25s {
+  animation: move 2s 0.25s ease-in-out infinite;
+  -moz-animation: move 2s 0.25s ease-in-out infinite;
+  -webkit-animation: move 2s 0.25s ease-in-out infinite;
+  -o-animation: move 2s 0.25s ease-in-out infinite;
+}
+.a-move-0_5s {
+  animation: move 2s 0.5s ease-in-out infinite;
+  -moz-animation: move 2s 0.5s ease-in-out infinite;
+  -webkit-animation: move 2s 0.5s ease-in-out infinite;
+  -o-animation: move 2s 0.5s ease-in-out infinite;
+}
 /* Keyframes */
 @keyframes spin {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
+}
+@keyframes move {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(8px);}
+  100% {transform: translateY(0px);}
+}
+/* Transition functions */
+.ttf-ease_in_out {transition-timing-function: ease-in-out;}
+/* Transition duration */
+.td-0_25s {transition-duration: 0.25s -webkit-transition-duration: 0.25s;}
+/* Transition properties */
+.tp-opacity {
+  transition-property: opacity;
+  -webkit-transition-property: opacity;
 }
 /*
 
@@ -234,6 +278,7 @@
   - Not small (+40rem)
   - Medium (+64rem)
   - Large (+90rem)
+  - Extra large (+120rem)
 
 */
 /* Not small */
@@ -262,9 +307,11 @@
 
   */
   /* Height */
-  .h-18rem-ns {height: 18rem;}
+  .h-10rem-ns {height: 10rem;}
+  .h-20rem-ns {height: 20rem;}
   /* Width */
-  .w-18rem-ns {width: 18rem;}
+  .w-10rem-ns {width: 10rem;}
+  .w-20rem-ns {width: 20rem;}
   /* Max width */
   .mw-18rem-ns {max-width: 24rem;}
   /*
@@ -317,8 +364,7 @@
   .w-50p-m {width: 50%;}
   .w-20rem-m {width: 20rem;}
   /* Max width */
-  /* Max width */
-  .mw-34rem-m {max-width: 34;}
+  .mw-34rem-m {max-width: 45%;}
   /*
 
     SPACING
@@ -327,6 +373,19 @@
   */
   /* Padding */
   .ph-4rem-m {padding-right: 4rem; padding-left: 4rem;}
+  /*
+
+    TYPOGRAPHY
+    - Font size
+    Line height
+
+  */
+  /* Font size */
+  .fs-1_6rem-m {font-size: 1.6rem;}
+  .fs-4_2rem-m {font-size: 4.2rem;}
+  /* Line height */
+  .lh-2rem-m {line-height: 2rem;}
+  .lh-4_5rem-m {line-height: 4.5rem;}
   /*
 
     BACKGROUND
@@ -356,6 +415,7 @@
     SIZING
     - Height
     - Width
+    - Max width
 
   */
   /* Height */
@@ -363,6 +423,8 @@
   .h-45p-l {height: 45%;}
   /* Width */
   .w-50p-l {width: 50%;}
+  /* Max width */
+  .mw-34rem-l {max-width: 34rem;}
   /*
 
     TYPOGRAPHY
@@ -371,7 +433,34 @@
 
   */
   /* Font size */
+  .fs-2_5rem-l {font-size: 2.5rem;}
   .fs-7_5rem-l {font-size: 6rem;}
   /* Line height */
   .lh-8_15rem-l {line-height: 6rem;}
+}
+/* Extra large */
+@media screen and (min-width: 120rem) {
+  /*
+
+    SIZING
+    - Height
+    - Width
+
+  */
+  /* Height */
+  .h-25rem-el {height: 30rem;}
+  /* Width */
+  .w-25rem-el {width: 30rem;}
+  /*
+
+    TYPOGRAPHY
+    - Font size
+    - Line height
+
+  */
+  /* Font size */
+  .fs-3rem-el {font-size: 3rem;}
+  .fs-8rem-el {font-size: 8rem;}
+  /* Line height */
+  .lh-8rem-el {line-height: 8rem;}
 }
