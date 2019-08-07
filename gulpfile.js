@@ -7,16 +7,9 @@ var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 
-//  Duplicate source file structure into build
-gulp.task('copy', function(done){
-  gulp.src('source/**/*')
-    .pipe(gulp.dest('build/'));
-  done();
-});
-
 // Concatenate css files
 gulp.task('concat-css', function(){
-  return gulp.src(['build/css/reset.css', 'build/css/site.css'])
+  return gulp.src(['source/css/reset.css', 'source/css/site.css'])
     .pipe(concat('site.css'))
     .pipe(gulp.dest('build/css/'));
 });
@@ -37,15 +30,9 @@ gulp.task('compress-css', function(done){
   done();
 });
 
-//  Ignore normalize.css
-gulp.task('ignore-css', function(){
-  return gulp.src('build/css/reset.css', {read: false})
-    .pipe(clean());
-});
-
 //  Minify html
 gulp.task('minify-html', function(){
-  return gulp.src('build/**/*.html')
+  return gulp.src('source/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build/'));
 });
@@ -60,7 +47,7 @@ gulp.task('compress-html', function(done){
 
 //  Minify javascripts
 gulp.task('minify-js', function(done){
-  gulp.src('build/js/scroll.js')
+  gulp.src('source/js/scroll.js')
     .pipe(uglify().on('error', function(e){
         console.log(e);
      }))
@@ -78,13 +65,28 @@ gulp.task('compress-js', function(done){
 
 //  Compress images
 gulp.task('compress-images', function(done){
-  gulp.src('build/images/**/*')
+  gulp.src('source/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('build/images/'));
   done();
 });
 
+//  Copy fonts
+gulp.task('copy-fonts', function(done){
+  gulp.src('source/css/fonts/*')
+    .pipe(gulp.dest('build/css/fonts'));
+  done();
+});
+
 // Build
 gulp.task('build', gulp.series(
-  'copy', 'concat-css', 'minify-css', 'compress-css', 'ignore-css', 'minify-html', 'compress-html', 'minify-js', 'compress-js', 'compress-images'
+  'concat-css',
+  'minify-css',
+  'compress-css',
+  'minify-html',
+  'compress-html',
+  'minify-js',
+  'compress-js',
+  'compress-images',
+  'copy-fonts'
 ));
