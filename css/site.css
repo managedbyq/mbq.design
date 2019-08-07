@@ -205,6 +205,7 @@
 
   TRANSFORM
   - Rotate
+  - Translate
   - Transform origin
 
 */
@@ -212,6 +213,9 @@
 .t-rotate-10deg {transform: rotate(10deg);}
 .t-rotate-90deg {transform: rotate(90deg);}
 .t-rotate-180deg {transform: rotate(180deg);}
+/* Translate */
+.t-translateY-0rem {transform: translateY(0);}
+.t-translateY-1rem {transform: translateY(1rem);}
 /* Transform origin */
 .t-origin-left_top {transform-origin: left top;}
 /*
@@ -266,11 +270,26 @@
 /* Transition functions */
 .ttf-ease_in_out {transition-timing-function: ease-in-out;}
 /* Transition duration */
-.td-0_25s {transition-duration: 0.25s -webkit-transition-duration: 0.25s;}
+.td-0_25s {
+  transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+}
+.td-1s {
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+.td-2s {
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+}
 /* Transition properties */
 .tp-opacity {
   transition-property: opacity;
   -webkit-transition-property: opacity;
+}
+.tp-transform {
+  transition-property: transform;
+  -webkit-transition-property: transform;
 }
 /*
 
