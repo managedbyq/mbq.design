@@ -161,6 +161,7 @@
 .ff-apercu-mono {font-family: "Apercu Mono", sans-serif;}
 /* Font size */
 .fs-0_875rem {font-size: 0.875rem;}
+.fs-1rem {font-size: 1.3rem;}
 .fs-1_2rem {font-size: 1.2rem;}
 .fs-1_4rem {font-size: 1.4rem;}
 .fs-1_6rem {font-size: 1.6rem;}
@@ -452,6 +453,7 @@
 
   */
   /* Font size */
+  .fs-1_8rem-l {font-size: 1.8rem;}
   .fs-2_5rem-l {font-size: 2.5rem;}
   .fs-7_5rem-l {font-size: 6rem;}
   /* Line height */
