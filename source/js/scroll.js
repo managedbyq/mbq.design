@@ -1,10 +1,8 @@
-// Init
 var startPos = 0;
 var endPos = 150;
 var scrollIndicator = document.getElementById('scroll-indicator-js');
 
-// Check scroll position
-function checkScrollPosition() {
+function setScrollIndicatorOpacity() {
   var windowY = window.scrollY;
   if (windowY >= startPos && windowY < endPos) {
     // Scrolling up
@@ -18,5 +16,5 @@ function checkScrollPosition() {
   }
 };
 
-// Event listener
-window.addEventListener("scroll", checkScrollPosition);
+window.onload = setScrollIndicatorOpacity();
+window.addEventListener("scroll", setScrollIndicatorOpacity);
