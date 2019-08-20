@@ -99,6 +99,7 @@
   - Letter spacing
   - Line height
   - Text align
+  - Text decoration
   - Color
 
 */
@@ -181,6 +182,8 @@
 .lh-2_75rem {line-height: 2.75rem;}
 /* Text align */
 .ta-center {text-align: center;}
+/* Text decoration */
+.td-none {text-decoration: none;}
 /* Color */
 .c-black {color: #000000;}
 .c-beige {color: #FFF4D7;}
