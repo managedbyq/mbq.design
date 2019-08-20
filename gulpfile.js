@@ -78,6 +78,13 @@ gulp.task('copy-fonts', function(done){
   done();
 });
 
+// Copy video
+gulp.task('copy-video', function(done){
+  gulp.src('source/video/*')
+    .pipe(gulp.dest('build/video'));
+  done();
+});
+
 // Build
 gulp.task('build', gulp.series(
   'concat-css',
@@ -88,5 +95,6 @@ gulp.task('build', gulp.series(
   'minify-js',
   'compress-js',
   'compress-images',
-  'copy-fonts'
+  'copy-fonts',
+  'copy-video'
 ));
