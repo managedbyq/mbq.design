@@ -1,2 +1,15 @@
-/node_modules
-/build
+.DS_Store
+node_modules
+build
+output
+npm-debug.log
+coverage
+*.log
+.env
+.env-overrides
+tmp
+jest
+jest_0
+.idea
+.eslintcache
+.vscode
