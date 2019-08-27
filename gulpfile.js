@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var cssmin = require('gulp-cssmin');
+var cleancss = require('gulp-clean-css');
 var clean = require('gulp-clean');
 var gzip = require('gulp-gzip');
 var htmlmin = require('gulp-htmlmin');
@@ -17,7 +17,7 @@ gulp.task('concat-css', function(){
 //  Minify stylesheets
 gulp.task('minify-css', function(done){
   gulp.src('build/css/site.css')
-    .pipe(cssmin())
+    .pipe(cleancss())
     .pipe(gulp.dest('build/css/'));
   done();
 });
